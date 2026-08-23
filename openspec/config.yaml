@@ -1,0 +1,52 @@
+schema: spec-driven
+
+context: |
+  Project: greenfield task-management application.
+  Stack: React with TypeScript; .NET 8 ASP.NET Core Web API controllers; SQLite with EF Core.
+  Architecture: Clean Architecture with Domain, Application, Infrastructure, and API layers.
+  Auth: JWT bearer authentication with secure password hashing; regular users manage only their own tasks.
+  Testing: Strict TDD enabled; no test tooling exists yet in this empty repository.
+  Scope: Local-only task CRUD, deterministic demo seed/reset, DTOs, and Swagger/OpenAPI.
+
+strict_tdd: true
+
+testing:
+  runner: null
+  framework: null
+  command: null
+  layers:
+    unit: false
+    integration: false
+    api: false
+    data_access: false
+    frontend_auth_crud: false
+    e2e: false
+  coverage:
+    available: false
+    command: null
+  quality:
+    linter: null
+    type_checker: null
+    formatter: null
+
+rules:
+  proposal:
+    - Respect the confirmed product scope and explicitly record risks and rollback considerations.
+  specs:
+    - Use Given/When/Then scenarios and RFC 2119 requirement keywords.
+    - Preserve 404 behavior for both missing and unauthorized task access.
+  design:
+    - Keep Clean Architecture boundaries explicit and document rationale for security and persistence decisions.
+  tasks:
+    - Group tasks by phase, use hierarchical numbering, and keep tasks independently verifiable.
+  apply:
+    guidelines:
+      - Follow TDD where practical and add tests with implementation.
+    tdd: true
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+  archive:
+    - Preserve the OpenSpec audit trail and warn before destructive changes.

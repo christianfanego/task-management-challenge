@@ -1,0 +1,63 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+# .NET
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstats
+
+# VS / Rider
+.vs/
+.idea/
+*.swp
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Frontend build
+frontend/dist/
+frontend/coverage/
+
+# Vite
+.vite/
+*.timestamp-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test results
+coverage/
+test-results/
+backend/**/TestResults/
+
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+
+# Environment
+*.env
+*.env.local
+appsettings.Development.json
